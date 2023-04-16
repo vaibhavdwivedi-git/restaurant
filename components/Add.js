@@ -45,7 +45,10 @@ const Add = ({ setClose }) => {
         img: url,
       };
       console.log(newProduct);
-      await axios.post("http://localhost:3000/api/products", newProduct);
+      await axios.post(
+        "https://restaurant-three-beige.vercel.app/api/products",
+        newProduct
+      );
       setClose(true);
     } catch (err) {
       console.log(err);

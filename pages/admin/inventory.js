@@ -12,7 +12,7 @@ const Index = ({ inventory }) => {
     console.log(id);
     try {
       const res = await axios.delete(
-        "http://localhost:3000/api/inventory/" + id
+        "https://restaurant-three-beige.vercel.app/api/inventory/" + id
       );
       setIngredientList(
         ingredientList.filter((ingredient) => ingredient._id !== id)
@@ -78,7 +78,9 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const inventoryRes = await axios.get("http://localhost:3000/api/inventory");
+  const inventoryRes = await axios.get(
+    "https://restaurant-three-beige.vercel.app/api/inventory"
+  );
 
   return {
     props: {
