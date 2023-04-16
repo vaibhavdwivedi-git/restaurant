@@ -28,3 +28,11 @@
   .button:last-child {
     background-color: crimson;
   }
+  
+
+  @media screen and (max-width:480px) {
+    
+    .container{
+      flex-direction: column;
+    }
+  }
