@@ -22,6 +22,7 @@ export default async function handler(req, res) {
       return res.status(401).json("Not authenticated!");
     }
     try {
+      console.log(req.body);
       const product = await Inventory.create(req.body);
       res.status(201).json(product);
     } catch (err) {

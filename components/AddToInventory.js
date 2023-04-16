@@ -13,7 +13,6 @@ const AddToInventory = ({ setClose }) => {
         name,
         amount,
       };
-      console.log(newIngredient);
       await axios.post(
         "https://restaurant-three-beige.vercel.app/inventory",
         newIngredient
